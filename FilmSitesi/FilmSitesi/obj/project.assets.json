@@ -4274,11 +4274,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\FilmSitesi.csproj",
+      "projectUniqueName": "C:\\Users\\90531\\SLAIPractice\\FilmSitesi\\FilmSitesi\\FilmSitesi\\FilmSitesi.csproj",
       "projectName": "FilmSitesi",
-      "projectPath": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\FilmSitesi.csproj",
+      "projectPath": "C:\\Users\\90531\\SLAIPractice\\FilmSitesi\\FilmSitesi\\FilmSitesi\\FilmSitesi.csproj",
       "packagesPath": "C:\\Users\\90531\\.nuget\\packages\\",
-      "outputPath": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\obj\\",
+      "outputPath": "C:\\Users\\90531\\SLAIPractice\\FilmSitesi\\FilmSitesi\\FilmSitesi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

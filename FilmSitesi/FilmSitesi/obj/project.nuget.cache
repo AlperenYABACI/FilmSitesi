@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cgP5t08OXeKn06Jsc/8Iig4r0nvv1zaMRKsz5NaObuAuRa3BrN4fDI6eYsQSHJPoXEkI5OQicfdCmUWtvN/yQA==",
+  "dgSpecHash": "zs4yCVeiI0EYnGQpdin3z/l/+tWy3w4e3Ru3C+UzAt4YufMfERXMryhKRJ3byyNgTSt032zgNmsfE22tokfg5Q==",
   "success": true,
-  "projectFilePath": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\FilmSitesi.csproj",
+  "projectFilePath": "C:\\Users\\90531\\SLAIPractice\\FilmSitesi\\FilmSitesi\\FilmSitesi\\FilmSitesi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\90531\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\90531\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
