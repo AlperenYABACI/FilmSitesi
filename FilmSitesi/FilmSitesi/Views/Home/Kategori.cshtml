@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title></title>
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+    <style>
+        /* İhtiyaç duyulan özel CSS stilleri buraya eklenir */
+        #movieList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Filmler arasında boşluk */
+        }
+
+        .movieItem {
+            width: calc(23% - 25px); /* Her film kutusunun genişliği, 20px kenar boşluğu */
+            margin-bottom: 20px; /* Her film kutusunun altında boşluk */
+            padding: 10px;
+            border: 1px solid #ddd;
+            cursor: pointer; /* Tıklanabilir gibi görünmesi için imleci değiştir */
+        }
+
+        .movieImage {
+            max-height: 300px; /* Film afişlerinin maksimum yüksekliği */
+            width: 100%; /* Genişliği %100 yaparak oranları koru */
+            object-fit: cover; /* İmajın boyutunu koruyarak kesebilir */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function () {
+            // URL'den kategori ID'sini al
+            const genreId = getParameterByName('kategoriId');
+            if (!genreId) {
+                console.error('Lütfen Geçerli Bir Kategori Seçin.');
+                return;
+            }
+            const apiKey = '054bca77059397a9afb73e3846278809';
+
+            // Belirli bir kategorideki filmleri çek
+            const genreUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${genreId}&language=tr-TR`;
+            $.getJSON(genreUrl, function (data) {
+                // API'den gelen veriyi kontrol et
+                console.log(data);
+
+                // Filmleri ekrana yazdır (en fazla 120 film)
+                const movies = data.results.slice(0, 120);
+                const movieList = $('#movieList');
+
+                // Her film için ayrı bir API çağrısı yap
+                movies.forEach(movie => {
+                    const movieUrl = `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${apiKey}&language=tr-TR&region=TR`;
+
+                    // Tıklanan filmin ID'sini URL'ye ekleyen fonksiyon
+                    function redirectToDetailPage() {
+                        window.location.href = `FilmSayfa/?movieId=${movie.id}`;
+                    }
+
+                    // Her film öğesine tıklama olayı ekleyin
+                    const movieItem = $(`
+                        <div class="movieItem">
+                            <h2>${movie.title}</h2>
+                            <img class="movieImage" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} Poster" />
+                            <strong><p>Puanı: ${movie.vote_average}</p></strong>
+                            <u><p>Türler</p></u>
+                             <div class="genres" id="genres_${movie.id}"></div>
+                        </div>
+                    `).click(redirectToDetailPage);
+
+                    movieList.append(movieItem);
+
+                    // Her film için ayrı bir API çağrısı yaparak tür bilgilerini al
+                    const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${apiKey}&language=tr-TR&region=TR`;
+                    $.getJSON(movieDetailsUrl, function (detailsData) {
+                        const genresHtml = detailsData.genres && detailsData.genres.length > 0
+                            ? detailsData.genres.map(genre => `<p>${genre.name}</p>`).join('')
+                            : '<p>Tür bilgisi yok</p>';
+                        
+                        // Tür bilgilerini ilgili div içine ekle
+                        $(`#genres_${movie.id}`).html(genresHtml);
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="main">
+            <div id="movieList"></div>
+        </div>
+    </div>
+</body>
+</html>

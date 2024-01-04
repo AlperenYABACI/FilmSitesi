@@ -1,0 +1,166 @@
+﻿@{
+	// Kullanıcı giriş yapmamışsa ve bulunduğu sayfa giriş sayfası değilse, giriş sayfasına yönlendir
+	if ((!User.Identity.IsAuthenticated && !Context.Request.Path.Equals("/Account/Login", StringComparison.OrdinalIgnoreCase)) && (!User.Identity.IsAuthenticated && !Context.Request.Path.Equals("/Account/Register", StringComparison.OrdinalIgnoreCase)) )
+	
+	{
+		Context.Response.Redirect("/Account/Login");
+	}
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>HD Film Cenneti</title>
+
+
+	<!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> -->
+	<!-- <link href="~/lib/toastrjs/toastr.min.css" rel="stylesheet" /> -->
+	<link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/FilmSitesi.styles.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/css/style.css" type="text/css" asp-append-version="true" />
+	<script type="text/javascript" src="~/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="~/js/jquery-func.js"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+	
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+			<div id="shell">
+				<div id="header">
+					<h1 id="logo"><a asp-controller="Home" asp-action="Index">HD Film Cenneti</a></h1>
+					<div class="social">
+						<span>Bizi Takip  Edin:</span>
+						<ul>
+							<li><a class="twitter" href="#">twitter</a></li>
+							<li><a class="facebook" href="#">facebook</a></li>
+							<li><a class="vimeo" href="#">vimeo</a></li>
+							<li><a class="rss" href="#">rss</a></li>
+						</ul>
+					</div>
+					<div id="navigation">
+						<ul>
+							<li class="nav-item">
+								<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="FilmSayfa">Şansımı Denemek İstiyorum</a>
+							</li>
+							<li class="nav-item dropdown mega-dropdown">
+								<a class="nav-link dropdown-toggle text-dark" href="#" id="kategoriDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Kategoriler
+								</a>
+								<div class="dropdown-menu mega-menu" aria-labelledby="kategoriDropdown">
+									<div class="row">
+										<div class="col-md-4">
+											<ul class="list-unstyled">
+												<li><a asp-area="" asp-controller="Home" asp-action="Kategori" asp-route-kategoriId="28">Aksiyon</a></li>
+												<li><a asp-area="" asp-controller="Home" asp-action="Kategori" asp-route-kategoriId="35">Komedi</a></li>
+												<li><a asp-area="" asp-controller="Home" asp-action="Kategori" asp-route-kategoriId="18">Dram</a></li>
+											</ul>
+										</div>
+										<div class="col-md-4">
+											<ul class="list-unstyled">
+												<!-- İkinci sütun kategori seçenekleri -->
+												<li><a asp-area="" asp-controller="Home" asp-action="Kategori" asp-route-kategoriId="10751">Aile</a></li>
+												<li><a asp-area="" asp-controller="Home" asp-action="Kategori" asp-route-kategoriId="10749">Romantik</a></li>
+												<li><a asp-area="" asp-controller="Home" asp-action="Kategori" asp-route-kategoriId="27">Korku</a></li>
+												<!-- Daha fazla kategori ekleyebilirsiniz -->
+											</ul>
+										</div>
+										<div class="col-md-4">
+											<ul class="list-unstyled">
+												<!-- Üçüncü sütun kategori seçenekleri -->
+												<li><a asp-area="" asp-controller="Home" asp-action="Kategori" asp-route-kategoriId="9648">Gizem</a></li>
+												<li><a asp-area="" asp-controller="Home" asp-action="Kategori" asp-route-kategoriId="878">Bilim Kurgu</a></li>
+												<li><a asp-area="" asp-controller="Home" asp-action="Kategori" asp-route-kategoriId="16">Animasyon</a></li>
+												<!-- Daha fazla kategori ekleyebilirsiniz -->
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+							@if (User.Identity.IsAuthenticated)
+							{
+								if (User.IsInRole("admin"))
+								{
+									<li class="nav-item">
+										<a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Index">Admin Sayfası</a>
+									</li>
+								}
+								<li class="nav-item ms-auto">
+									<a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Profile">
+										<i class="fa-solid fa-user me-2"></i>@User.FindFirst("Username").Value
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout"><i class="fa-solid fa-right-from-bracket me-2"></i>Çıkış Yap</a>
+								</li>
+							}
+							else
+							{
+								<li class="nav-item ms-auto">
+									<a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login"><i class="fa-solid fa-right-to-bracket me-2"></i>Giriş Yap</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register"><i class="fa-solid fa-user me-2"></i>Kaydol</a>
+								</li>
+							}
+						</ul>
+					</div>
+					<div id="sub-navigation">
+						<ul>
+							<li><a asp-controller="Home" asp-action="Index">En Son Eklenenler</a></li>
+							<li><a asp-controller="Home" asp-action="YuksekPuan">En Yüksek Puanlılar</a></li>
+							<li><a asp-controller="Home" asp-action="Izlenen">En Çok İzlenenler</a></li>
+						</ul>
+						<div id="search">
+							<form id="search-form" method="get" accept-charset="utf-8">
+								<label for="search-field"></label>
+								<input type="text" name="search-field" placeholder="Ne Aramıştınız?" id="search-field" class="blink search-field" />
+								<input type="submit" value="Ara!" class="search-button" />
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+	<footer class="border-top footer text-muted">
+		<div class="container">
+			&copy; 2023 - FilmSitesi - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+		</div>
+	</footer>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- <script src="~/lib/toastrjs/toastr.min.js"></script> -->
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	<script>
+		$(document).ready(function () {
+			$('#search-form').submit(function (e) {
+				// Form submitini engelle
+				e.preventDefault();
+
+				// Arama kelimesini al
+				var searchTerm = $('#search-field').val();
+
+				// Temel URL'yi al
+				var baseURL = window.location.origin;
+
+				// Arama kelimesini URL'ye ekle ve yönlendir
+				window.location.href = `${baseURL}/Home/Ara/?search=${encodeURIComponent(searchTerm)}`;
+
+				// Arama yapıldıktan sonra search-field değerini sıfırla
+				$('#search-field').val('');
+			});
+		});
+	</script>
+</body>
+</html>

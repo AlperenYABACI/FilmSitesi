@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Film Arama</title>
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+    <style>
+        /* İhtiyaç duyulan özel CSS stilleri buraya eklenir */
+        #movieList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Filmler arasında boşluk */
+            justify-content: space-around; /* Film kutularını ortalamak için */
+        }
+
+        .movieItem {
+            width: calc(23% - 20px); /* Her film kutusunun genişliği, 20px kenar boşluğu */
+            margin-bottom: 20px; /* Her film kutusunun altında boşluk */
+            padding: 10px;
+            border: 1px solid #ddd;
+            cursor: pointer; /* Tıklanabilir gibi görünmesi için imleci değiştir */
+        }
+
+        .movieImage {
+            max-height: 300px; /* Film afişlerinin maksimum yüksekliği */
+            width: 100%; /* Genişliği %100 yaparak oranları koru */
+            object-fit: cover; /* İmajın boyutunu koruyarak kesebilir */
+        }
+
+        #loadMoreContainer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #loadMoreButton {
+            cursor: pointer;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #333;
+            font-size: 14px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+            #loadMoreButton:hover {
+                background-color: #ce5e6a;
+                color: black;
+            }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const apiKey = '054bca77059397a9afb73e3846278809';
+            const region = 'TR';
+            let page = 1;
+
+            // Sayfa yüklendiğinde URL'den arama kelimesini kontrol et
+            function checkSearchTermFromURL() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const searchTerm = urlParams.get('search');
+
+                if (searchTerm) {
+                    // Arama kelimesini form alanına yerleştir
+                    $('#search-field').val(searchTerm);
+
+                    // Sayfayı arama sonuçlarıyla güncelle
+                    performSearch(searchTerm);
+                }
+            }
+
+            // Arama formunu işle
+            $('#search-form').submit(function (e) {
+                e.preventDefault();
+                const searchTerm = $('#search-field').val();
+
+                // Sayfayı arama sonuçlarıyla güncelle
+                performSearch(searchTerm);
+            });
+
+            // Daha Fazla Göster butonuna tıklanınca yeni filmleri yükle
+            $('#loadMoreButton').click(function () {
+                performSearch($('#search-field').val());
+            });
+
+            // Arama işlemini gerçekleştir
+            function performSearch(searchTerm) {
+                const moviesUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=tr-TR&query=${searchTerm}&sort_by=popularity.desc&page=${page}`;
+
+                $.getJSON(moviesUrl, function (data) {
+                    const movies = data.results;
+                    const movieList = $('#movieList');
+
+                    // Eğer ilk sayfa ise temizleme işlemi yap
+                    if (page === 1) {
+                        movieList.empty();
+                    }
+
+                    // Her film için ayrı bir API çağrısı yap
+                    movies.forEach(movie => {
+                        const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${apiKey}&language=tr-TR&region=${region}`;
+                        getMovieDetails(movieDetailsUrl, movie);
+                    });
+
+                    // Sayfa numarasını güncelle
+                    page++;
+
+                    // Sayfa sonu kontrolü
+                    if (page <= data.total_pages) {
+                        // Daha fazla göster butonunu göster
+                        $('#loadMoreContainer').show();
+                    } else {
+                        // Daha fazla göster butonunu gizle
+                        $('#loadMoreContainer').hide();
+                    }
+                });
+            }
+
+            // Detayları almak için fonksiyon
+            function getMovieDetails(url, movie) {
+                $.getJSON(url, function (detailsData) {
+                    // Detayları işle, örneğin:
+                    const genresHtml = detailsData.genres && detailsData.genres.length > 0
+                        ? detailsData.genres.map(genre => `<p>${genre.name}</p>`).join('')
+                        : '<p>Tür bilgisi yok</p>';
+
+                    // Tıklanan filmin ID'sini URL'ye ekleyen fonksiyon
+                    function redirectToDetailPage() {
+                        const movieId = movie.id;
+
+                        // Base URL'i al
+                        const baseURL = window.location.origin;
+
+                        // Yeni URL'yi oluştur, mevcut parametreleri sil ve movieId'yi ekle
+                        const newURL = `${baseURL}/Home/FilmSayfa/?movieId=${movieId}`;
+                        window.location.href = newURL;
+                    }
+                    // Her film için ayrı bir API çağrısı yaparak tür bilgilerini al
+                    const movieItem = $(`
+                                <div class="movieItem">
+                                    <h2>${movie.title}</h2>
+                                    <img class="movieImage" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} Poster" />
+                                    <strong><p>Puanı: ${movie.vote_average}</p></strong>
+                                    <u><p>Türler</p></u>
+                                    <div class="genres" id="genres_${movie.id}">${genresHtml}</div>
+                                </div>
+                                    `).click(redirectToDetailPage);;
+
+                    $('#movieList').append(movieItem);
+                });
+            }
+
+            // URL'yi güncelle
+            function updateURL(searchTerm) {
+                const newURL = `Home/Ara/?search=${encodeURIComponent(searchTerm)}`;
+                window.history.pushState({ searchTerm: searchTerm }, "", newURL);
+            }
+
+            // İlk yüklenen sayfayı arama sonuçlarıyla güncelle
+            checkSearchTermFromURL();
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="main">
+            <div id="movieList"></div>
+            <div id="loadMoreContainer" style="display: none;">
+                <button id="loadMoreButton">Daha Fazla Göster</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

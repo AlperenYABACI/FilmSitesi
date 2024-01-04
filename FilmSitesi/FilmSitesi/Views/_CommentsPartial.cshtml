@@ -1,0 +1,17 @@
+﻿@model List<YorumViewModel>
+
+<div id="comments-section">
+    <h3>Yorumlar</h3>
+    <ul id="comments-list">
+        @foreach (var comment in Model)
+        {
+            <li>@comment.Icerik</li>
+        }
+    </ul>
+    <form id="comment-form">
+        <label for="comment-text">Yorumunuz:</label>
+        <textarea id="comment-text" name="comment-text" rows="4" cols="50"></textarea>
+        <br />
+        <button type="button" onclick="addComment()">Yorum Ekle</button>
+    </form>
+</div>

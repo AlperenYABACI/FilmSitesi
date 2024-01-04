@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title></title>
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+    <style>
+        /* İhtiyaç duyulan özel CSS stilleri buraya eklenir */
+        #movieList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Filmler arasında boşluk */
+        }
+
+        .movieItem {
+            width: calc(23% - 20px); /* Her film kutusunun genişliği, 20px kenar boşluğu */
+            margin-bottom: 20px; /* Her film kutusunun altında boşluk */
+            padding: 10px;
+            border: 1px solid #ddd;
+            cursor: pointer; /* Tıklanabilir gibi görünmesi için imleci değiştir */
+        }
+
+        .movieImage {
+            max-height: 300px; /* Film afişlerinin maksimum yüksekliği */
+            width: 100%; /* Genişliği %100 yaparak oranları koru */
+            object-fit: cover; /* İmajın boyutunu koruyarak kesebilir */
+        }
+
+        .pagination {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+            .pagination button {
+                margin: 0 5px;
+                cursor: pointer;
+                padding: 8px 12px;
+                border: 1px solid #ccc;
+                background-color: #fff;
+                color: #333;
+                font-size: 14px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+                .pagination button:hover {
+                    background-color: #ce5e6a;
+                    color: black;
+                }
+
+                .pagination button.current-page {
+                    background-color: #ce5e6a;
+                    color: #fff;
+                    font-weight: bold;
+                }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const apiKey = '054bca77059397a9afb73e3846278809';
+            const region = 'TR';
+            let page = 1;
+
+            function fetchMovies() {
+                const MoviesUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=tr-TR&region=${region}&sort_by=vote_average.desc&page=${page}`;
+
+                $.getJSON(MoviesUrl, function (data) {
+                    const movies = data.results.slice(0, 120);
+                    const movieList = $('#movieList');
+
+                    // Temizleme işlemi
+                    movieList.empty();
+
+                    // Her film için ayrı bir API çağrısı yap
+                    movies.forEach(movie => {
+                        const movieUrl = `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${apiKey}&language=tr-TR&region=${region}`;
+
+                        // Tıklanan filmin ID'sini URL'ye ekleyen fonksiyon
+                        function redirectToDetailPage() {
+                            window.location.href = `FilmSayfa/?movieId=${movie.id}`;
+                        }
+
+                        // Her film öğesine tıklama olayı ekleyin
+                        const movieItem = $(`
+                                                            <div class="movieItem">
+                                                                <h2>${movie.title}</h2>
+                                                                <img class="movieImage" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} Poster" />
+                                                                <strong><p>Puanı: ${movie.vote_average}</p></strong>
+                                                                <u><p>Türler</p></u>
+                                                                <div class="genres" id="genres_${movie.id}"></div>
+                                                            </div>
+                                                        `).click(redirectToDetailPage);
+
+                        movieList.append(movieItem);
+
+                        // Her film için ayrı bir API çağrısı yaparak tür bilgilerini al
+                        const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${apiKey}&language=tr-TR&region=${region}`;
+                        $.getJSON(movieDetailsUrl, function (detailsData) {
+                            const genresHtml = detailsData.genres && detailsData.genres.length > 0
+                                ? detailsData.genres.map(genre => `<p>${genre.name}</p>`).join('')
+                                : '<p>Tür bilgisi yok</p>';
+
+                            // Tür bilgilerini ilgili div içine ekle
+                            $(`#genres_${movie.id}`).html(genresHtml);
+                        });
+                    });
+
+                    // Sayfalandırma butonlarını güncelle
+                    updatePagination(data.total_pages);
+                });
+            }
+
+            // Sayfa numaralarını güncelleyen fonksiyon
+            function updatePagination(totalPages) {
+                const pagination = $('.pagination');
+                pagination.empty();
+
+                const maxButtons = 5;
+                let startPage = Math.max(1, page - 2);
+                let endPage = Math.min(startPage + maxButtons - 1, totalPages);
+
+                if (endPage - startPage < maxButtons - 1) {
+                    startPage = Math.max(1, endPage - maxButtons + 1);
+                }
+
+                for (let i = startPage; i <= endPage; i++) {
+                    const button = $(`<button>${i}</button>`);
+                    button.click(() => {
+                        page = i;
+                        fetchMovies();
+                        updateURL();
+                    });
+
+                    // Eğer mevcut sayfa ise vurgula
+                    if (i === page) {
+                        button.addClass('current-page');
+                    }
+
+                    pagination.append(button);
+                }
+
+                // Sayfa numarasını gösteren kısmı güncelle
+                $('#currentPage').text(`Mevcut Sayfa: ${page}`);
+            }
+
+            // URL'i güncelleyen fonksiyon
+            function updateURL() {
+                const newURL = `${window.location.pathname}?page=${page}`;
+                window.history.pushState({ page: page }, "", newURL);
+            }
+
+            // Sayfa yüklendiğinde URL'den sayfa numarasını kontrol et
+            function checkPageFromURL() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const pageParam = urlParams.get('page');
+
+                if (pageParam) {
+                    page = parseInt(pageParam);
+                }
+            }
+
+            // Sayfa yüklendiğinde URL'den sayfa numarasını kontrol et
+            checkPageFromURL();
+
+            // İlk yüklenen sayfayı al
+            fetchMovies();
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="main">
+            <div id="movieList"></div>
+            <div class="pagination"></div>
+            <div id="currentPage"></div>
+        </div>
+    </div>
+</body>
+</html>

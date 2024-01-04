@@ -1,0 +1,569 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FilmSitesi.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FilmSitesi.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\ie6.css",
+      "PackagePath": "staticwebassets\\css\\ie6.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\body-bg.gif",
+      "PackagePath": "staticwebassets\\css\\images\\body-bg.gif"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\coming-soon1.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\coming-soon1.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\coming-soon2.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\coming-soon2.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\comments.gif",
+      "PackagePath": "staticwebassets\\css\\images\\comments.gif"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\css\\images\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\image-hover.png",
+      "PackagePath": "staticwebassets\\css\\images\\image-hover.png"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\logo.png",
+      "PackagePath": "staticwebassets\\css\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\logo2.png",
+      "PackagePath": "staticwebassets\\css\\images\\logo2.png"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie1.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie1.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie10.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie10.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie11.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie11.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie12.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie12.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie13.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie13.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie14.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie14.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie15.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie15.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie16.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie16.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie17.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie17.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie18.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie18.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie2.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie2.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie3.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie3.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie4.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie4.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie5.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie5.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie6.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie6.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie7.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie7.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie8.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie8.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\movie9.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\movie9.jpg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\social.gif",
+      "PackagePath": "staticwebassets\\css\\images\\social.gif"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\images\\stars.gif",
+      "PackagePath": "staticwebassets\\css\\images\\stars.gif"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\css\\toastrjs\\toastr.min.js",
+      "PackagePath": "staticwebassets\\css\\toastrjs\\toastr.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\js\\jquery-1.4.2.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-1.4.2.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\js\\jquery-func.js",
+      "PackagePath": "staticwebassets\\js\\jquery-func.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\all.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\all.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\brands.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\brands.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\brands.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\fontawesome.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\regular.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\regular.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\regular.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\regular.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\solid.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\solid.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\solid.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\solid.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\svg-with-js.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\svg-with-js.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\svg-with-js.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\v4-font-face.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v4-font-face.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\v4-font-face.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v4-font-face.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v4-shims.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\v4-shims.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v4-shims.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\v5-font-face.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v5-font-face.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\css\\v5-font-face.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v5-font-face.min.css"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\all.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\all.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\all.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\all.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\brands.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\brands.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\brands.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\brands.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\conflict-detection.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\conflict-detection.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\conflict-detection.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\conflict-detection.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\fontawesome.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\fontawesome.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\fontawesome.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\fontawesome.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\regular.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\regular.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\regular.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\regular.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\solid.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\solid.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\solid.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\solid.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\v4-shims.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\v4-shims.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\js\\v4-shims.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\v4-shims.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\sprites\\brands.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\sprites\\brands.svg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\sprites\\regular.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\sprites\\regular.svg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\sprites\\solid.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\sprites\\solid.svg"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\font-awesome\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Projeler\\FilmSitesi\\FilmSitesi\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.FilmSitesi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.FilmSitesi.props",
+      "PackagePath": "build\\FilmSitesi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.FilmSitesi.props",
+      "PackagePath": "buildMultiTargeting\\FilmSitesi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.FilmSitesi.props",
+      "PackagePath": "buildTransitive\\FilmSitesi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

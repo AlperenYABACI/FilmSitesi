@@ -1,0 +1,172 @@
+﻿@model YorumViewModel
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Film Detay</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <style>
+        #movieTitle {
+            font-size: 46px; /* Yazı boyutunu ayarla */
+        }
+
+        #main {
+            padding: 46px; /* Ana içerik alanına padding ekle */
+        }
+
+        #trailer {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #reviews {
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        function getMovieId(){
+            const urlParams = new URLSearchParams(window.location.search);
+            const movieId = urlParams.get('movieId');
+            return movieId ;
+        }
+
+        $(document).ready(function () {
+            // Sayfa URL'sinden film ID'sini al
+            //const urlParams = new URLSearchParams(window.location.search);
+            //let movieId = urlParams.get('movieId');
+            let movieId = getMovieId();
+            // Eğer movieId bulunamazsa, rastgele bir sayı oluştur
+            if (!movieId) {
+                movieId = Math.floor(Math.random() * 300); // ilk 300
+                const separator = window.location.href.includes('?') ? '&' : '?';
+                const newUrl = `${window.location.href}${separator}movieId=${movieId}`;
+                // Oluşturulan rastgele ID'yi URL'ye ekleyin
+                window.history.pushState({}, document.title, newUrl);
+            }
+
+            // TMDb API bilgileri
+            const apiKey = '054bca77059397a9afb73e3846278809';
+
+            // TMDb API ile film bilgilerini çek
+            const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=tr-TR&region=TR`;
+            $.getJSON(apiUrl, function (data) {
+                // Film bilgilerini ekrana yazdır
+                const movieTitle = data.title;
+                $('#movieTitle').text(movieTitle);
+                $('head title').text(`${movieTitle}`); // Başlıkta filmin adını göster
+                $('#genre').text(data.genres[0].name); // API'den tür bilgisini almak için uygun şekilde güncellemelisiniz.
+                $('#movieImage').attr('src', 'https://image.tmdb.org/t/p/w500' + data.poster_path); // Resim yolu güncellenmeli
+                $('#overview').text(data.overview);
+                $('#runtime').text(data.runtime);
+                $('#vote_average').text(data.vote_average.toFixed(1));
+                $('#release_date').text(data.release_date);
+
+                // Fragmanı al ve adresini ver
+                const trailerUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}&language=tr-TR`;
+                $.getJSON(trailerUrl, function (trailerData) {
+                    const trailerContainer = $('#trailer');
+                    if (trailerData.results.length > 0) {
+                        const firstTrailerKey = trailerData.results[0].key;
+                        const youtubeUrl = `https://www.youtube.com/watch?v=${firstTrailerKey}`;
+                        trailerContainer.html(`<a href="${youtubeUrl}" target="_blank">Fragmanı İzle</a>`);
+                    } else {
+                        trailerContainer.text('Fragman bulunamadı.');
+                    }
+                });
+
+                // Yorumları al ve ekrana yazdır
+                const reviewsUrl = `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${apiKey}&language=tr-TR`;
+                $.getJSON(reviewsUrl, function (reviewsData) {
+                    const reviewsContainer = $('#reviews');
+                    if (reviewsData.results.length > 0) {
+                        reviewsContainer.html('<h3>Yorumlar:</h3>');
+                        const ul = $('<ul>');
+                        reviewsData.results.forEach(review => {
+                            const li = $(`<li>${review.content}<br/><em>${review.author}</em></li>`);
+                            ul.append(li);
+                        });
+                        reviewsContainer.append(ul);
+                    } else {
+                        reviewsContainer.html('<p>Henüz yorum bulunmamaktadır.</p>');
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        function addComment() {
+            var movieId = getMovieId();
+            var commentText = document.getElementById('comment-text').value;
+
+            // AJAX ile yorumu eklemek için bir istek yapın
+            $.ajax({
+                type: 'POST',
+                url: '/CommentController/AddComment',  // Doğru Controller ve Action adını buraya ekleyin
+                data: { movieId: movieId, commentText: commentText },
+                success: function (data) {
+                    // Yorum eklendikten sonra PartialView'i güncelleyin
+                    $('#comments-container').html(data);
+                },
+                error: function () {
+                    alert('Yorum eklenirken bir hata oluştu.');
+                }
+            });
+        }
+
+        function getComments() {
+            var movieId = getMovieId();
+
+            // AJAX ile yorumları getirmek için bir istek yapın
+            $.ajax({
+                type: 'GET',
+                url: '/CommentController/GetComment',  // Doğru Controller ve Action adını buraya ekleyin
+                data: { movieId: movieId },
+                success: function (data) {
+                    // Yorumları göstermek için PartialView'i güncelleyin
+                    $('#comments-container').html(data);
+                },
+                error: function () {
+                    //alert('Yorumlar getirilirken bir hata oluştu.');
+                }
+            });
+        }
+
+        // Sayfa yüklendiğinde yorumları getirin
+        $(document).ready(function () {
+            getComments();
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="main">
+            <img src="" width="30%" height="80%" alt="" class="alignleft" id="movieImage" />
+            <h2 id="movieTitle">Yükleniyor...</h2>
+            <h3>Tür: <span id="genre"></span></h3><br />
+            <p id="overview">Yükleniyor...</p><br />
+            <br />
+            <h3>Süre: <span id="runtime"></span> dk</h3><br />
+            <h3>Puan: <span id="vote_average"></span></h3><br />
+            <h3>Çıkış Tarihi: <span id="release_date"></span></h3><br />
+
+            <div id="trailer"></div>
+            <br><br/>
+            <br><br /><br><br /><br><br /><br><br />
+            <u><h3>Veri Tabanı Yorumları</h3></u>
+            <div id="reviews"></div>
+            <br><br/>
+            <u><h3>Site Yorumları</h3></u>
+            <div id="comments-container"></div>
+            <br><br /><br><br />
+
+            <form id="comment-form">
+                <label asp-for="Icerik" for="comment-text"></label>
+                <textarea asp-for="Icerik" id="comment-text" name="comment-text" rows="4" cols="50"></textarea>
+                <br />
+                <button type="button" onclick="addComment()">Yorum Ekle</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
